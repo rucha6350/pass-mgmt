@@ -1,0 +1,23 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /passMgmt
+spring:
+  datasource:
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/passManager
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      transaction:
+        jta:
+          platform: org.hibernate.service.jta.platform.internal.JBossStandAloneJtaPlatform
+    generate-ddl: true
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null

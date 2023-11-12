@@ -1,0 +1,8 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: pass-mgmt-service
+  cloud:
+    config:
+      enabled: true
